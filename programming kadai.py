@@ -89,7 +89,7 @@ while b < 1:
                             print("*" * 20)
                             for i in getList:
                                 if getList[i][0] == 0:
-                                    pass
+                                    pass ######################################################### pass is ok, this code is not have problem
                                 elif getList[i][0] >= 1:
                                     print(f"{item.index(i) + 1}番 {i} {getList[i][0]}個 : {price[item.index(i)] * getList[i][0]}円")
                             print(f"合計金額は {total}円です。")
