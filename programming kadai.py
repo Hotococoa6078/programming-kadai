@@ -93,9 +93,7 @@ while b < 1:
                                 elif getList[i][0] >= 1:
                                     print(f"{item.index(i) + 1}番 {i} {getList[i][0]}個 : {price[item.index(i)] * getList[i][0]}円")
                             print(f"合計金額は {total}円です。")
-                            r = 1
-                            t = 1
-                            b = 1
+                            r, t, b = 1, 1, 1
                             break
                         elif res == 1:
                             y = 0
