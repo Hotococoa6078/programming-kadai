@@ -9,7 +9,7 @@ while b < 1:
     try:
         Num = input("メニュー番号　1～5を入力（9で注文内容確認、0で終了）: ")
         num = int(Num) - 1
-        if 0 <= num <= 4:
+        if 0 <= num <= 4: #1~5
             a = 0
             while a == 0:
                 count = int(input(f'{item[num]}は何個要りますか？(キャンセルは0) : '))
@@ -21,7 +21,7 @@ while b < 1:
                     a += 1
                 getList[item[num]][0],getList[item[num]][1] = getList[item[num]][0] + count, getList[item[num]][1] + price[num] * count
                 total += price[num] * count
-        elif num == 8:
+        elif num == 8: #9
             print('これまでに入力した購入リストです。')
             for i in getList:
                 if getList[i][0] == 0:
@@ -70,7 +70,7 @@ while b < 1:
                     p += 1
                 else:
                     print('正しい数字を入力してください。')
-        elif num == -1:
+        elif num == -1: #0
             r  = 0
             while r < 1:
                 try:
