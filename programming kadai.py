@@ -37,7 +37,7 @@ while b < 1:
                         d = int(input('変更が必要なメニュー番号を入力(0で終了) : ')) -1
                         if d == -1:
                             print('変更が保存されました。')
-                            p = 1
+                            p, f = 1, 1
                         elif 0 <= d <= 4:
                             if getList[item[d]][0] == 0:
                                 print('購入履歴のない番号です。')
@@ -61,7 +61,7 @@ while b < 1:
                                             l = input(f'本当にリストから{item[d]}を{g}個抜きますか？(Y/N) : ')
                                             if l == 'y' or j == 'Y':
                                                 getList[item[d]] = [ getList[item[d]][0] - g   , getList[item[d]][1] - (g*price[d])   ]
-                                                print('商品が成功的に{g}個抜けました。')
+                                                print(f'商品が成功的に{g}個抜けました。')
                                             elif j == 'n' or j == 'N':
                                                 print('キャンセルしました。')
                         else:
@@ -139,7 +139,7 @@ while b < 1:
     except ValueError as e:
         print("エラーが発生しました。数字だけ入力してください。")
         print('error : ', e)
-    #except Exception as e:
-        #print("エラーが発生しました。もう一度やり直してください。")
-        #print('error : ', e)
+    except Exception as e:
+        print("エラーが発生しました。もう一度やり直してください。")
+        print('error : ', e)
 
