@@ -18,7 +18,9 @@ while b < 1: #start
                         print('キャンセルしました。')
                         a += 1
                     elif 0 <= count: #print buy item info
+                        print('=' * 15)
                         print(f"{num+1}番 {item[num]} {count}個 : {price[num] * count}円")
+                        print('=' * 15)
                         a += 1
                     getList[item[num]][0],getList[item[num]][1] = getList[item[num]][0] + count, getList[item[num]][1] + price[num] * count
                     total += price[num] * count
@@ -26,12 +28,13 @@ while b < 1: #start
                     print("エラーが発生しました。数字だけ入力してください。")
                     print('error : ', e)
         elif num == 8: #9,  buyList info
-            print('これまでに入力した購入リストです。')
+            print('これまでに入力した購入リストです。\n', '='*15)
             for i in getList: #print buyList info
                 if getList[i][0] == 0:
                     pass
                 elif getList[i][0] >= 1:
                     print(f"{item.index(i) + 1}番 {i} {getList[i][0]}個 : {price[item.index(i)] * getList[i][0]}円")
+            print('=' * 15)
             p = 0
             while p < 1: #check change buyList
                 try:
