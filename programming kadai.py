@@ -167,7 +167,7 @@ while b < 1: #start
                                                                 while c < 1:
                                                                     l = input(f'本当にリストから{item[u]}を{g}個抜きますか？(Y/N) : ')
                                                                     if l == 'y' or j == 'Y':
-                                                                        getList[item[d]] = [ getList[item[u]][0] - g   , getList[item[u]][1] - (g*price[u])]
+                                                                        getList[item[u]] = [ getList[item[u]][0] - g   , getList[item[u]][1] - (g*price[u])]
                                                                         print(f'商品が成功的に{g}個抜けました。')
                                                                         c = 1
                                                                     elif j == 'n' or j == 'N':
