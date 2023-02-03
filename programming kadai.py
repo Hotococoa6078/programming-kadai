@@ -72,7 +72,7 @@ while b < 1: #start
                                                             print("Y(Yes)またはN(No)を入力してください。")
                                                 elif g >= 2:
                                                     if getList[item[d]][0] < g:
-                                                        print("入力された数字が大きすぎます。")
+                                                        print("商品がないか、または入力された数字が大きすぎます。")
                                                     else:
                                                         n = 0
                                                         while n < 1:
@@ -118,12 +118,13 @@ while b < 1: #start
                         try:
                             res = int(input(""))
                             if res == 0:
-                                print("*" * 20)
+                                print("=" * 20)
                                 for i in getList:
                                     if getList[i][0] == 0:
                                         pass ######################################################### pass is ok, this code is not have problem
                                     elif getList[i][0] >= 1:
                                         print(f"{item.index(i) + 1}番 {i} {getList[i][0]}個 : {price[item.index(i)] * getList[i][0]}円")
+                                print("=" * 20)
                                 print(f"合計金額は {total}円です。")
                                 r, t, b = 1, 1, 1
                                 break
@@ -161,7 +162,7 @@ while b < 1: #start
                                                                     print("Y(Yes)またはN(No)を入力してください。")
                                                         elif g >= 2:
                                                             if getList[item[u]][0] < g:
-                                                                print("入力された数字が大きすぎます。")
+                                                                print("商品がないか、または入力された数字が大きすぎます。")
                                                             else:
                                                                 c = 0
                                                                 while c < 1:
