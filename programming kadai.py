@@ -75,7 +75,7 @@ while b < 1: #start
                                                         print("入力された数字が大きすぎます。")
                                                     else:
                                                         n = 0
-                                                        while n < 0:
+                                                        while n < 1:
                                                             l = input(f'本当にリストから{item[d]}を{g}個抜きますか？(Y/N) : ')
                                                             if l == 'y' or l == 'Y':
                                                                 getList[item[d]] = [ getList[item[d]][0] - g   , getList[item[d]][1] - (g*price[d])   ]
