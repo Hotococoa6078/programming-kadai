@@ -112,7 +112,7 @@ while b < 1: #start
                         elif getList[i][0] >= 1:
                             print(f"{item.index(i) + 1}番 {i} {getList[i][0]}個 : {price[item.index(i)] * getList[i][0]}円")
                     print(f"TOTAL : {total}円")
-                    print("間違いがない場合は０を、ある場合は１を入力してください。")
+                    print("間違いがない場合は0を、ある場合は1を入力してください。")
                     t = 0
                     while t < 1:
                         try:
@@ -136,13 +136,13 @@ while b < 1: #start
                                             print('変更が保存されました。')
                                             y = 1
                                         elif 0 <= u <= 4:
-                                            if getList[item[d]][0] == 0:
+                                            if getList[item[u]][0] == 0:
                                                 print('購入履歴のない番号です。')
                                             else:
                                                 h = 0
                                                 while h < 1:
                                                     try:
-                                                        g = int(input('商品を取り消す場合は1、個数を減らすには2 以上の数字を入力してください。(0で終了) : '))
+                                                        g = int(input('商品を取り消す場合は1、個数を減らすには2以上の数字を入力してください。(0で終了) : '))
                                                         if g == 0:
                                                             print('変更が保存されました。')
                                                             h, u = 1, 1
@@ -151,7 +151,7 @@ while b < 1: #start
                                                             while v < 1:
                                                                 j = input("本当に取り消しますか?(Y/N) : ")
                                                                 if j == 'y' or j == 'Y':
-                                                                    getList[item[d]] = [0, 0]
+                                                                    getList[item[u]] = [0, 0]
                                                                     print('商品の取り消しに成功しました。')
                                                                     v = 1
                                                                 elif j == 'n' or j == 'N':
@@ -160,14 +160,14 @@ while b < 1: #start
                                                                 else:
                                                                     print("Y(Yes)またはN(No)を入力してください。")
                                                         elif g >= 2:
-                                                            if getList[item[d]][0] < g:
+                                                            if getList[item[u]][0] < g:
                                                                 print("入力された数字が大きすぎます。")
                                                             else:
                                                                 c = 0
                                                                 while c < 1:
-                                                                    l = input(f'本当にリストから{item[d]}を{g}個抜きますか？(Y/N) : ')
+                                                                    l = input(f'本当にリストから{item[u]}を{g}個抜きますか？(Y/N) : ')
                                                                     if l == 'y' or j == 'Y':
-                                                                        getList[item[d]] = [ getList[item[d]][0] - g   , getList[item[d]][1] - (g*price[d])   ]
+                                                                        getList[item[d]] = [ getList[item[u]][0] - g   , getList[item[u]][1] - (g*price[u])]
                                                                         print(f'商品が成功的に{g}個抜けました。')
                                                                         c = 1
                                                                     elif j == 'n' or j == 'N':
