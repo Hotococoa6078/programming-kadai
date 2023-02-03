@@ -121,7 +121,7 @@ while b < 1: #start
                                 print("=" * 20)
                                 for i in getList:
                                     if getList[i][0] == 0:
-                                        pass ######################################################### pass is ok, this code is not have problem
+                                        pass
                                     elif getList[i][0] >= 1:
                                         print(f"{item.index(i) + 1}番 {i} {getList[i][0]}個 : {price[item.index(i)] * getList[i][0]}円")
                                 print("=" * 20)
@@ -199,3 +199,4 @@ while b < 1: #start
     except Exception as e:
         print("エラーが発生しました。もう一度やり直してください。")
         print('error : ', e)
+print('program is end')
