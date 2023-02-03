@@ -7,7 +7,7 @@ total = 0
 a, b = 0, 0
 while b < 1: #start
     try:
-        Num = input("メニュー番号　1～5を入力（9で注文内容確認、0で終了）: ")
+        Num = input("メニュー番号1～5を入力（9で注文内容確認、0で終了）: ")
         num = int(Num) - 1
         if 0 <= num <= 4: #1~5
             a = 0
